@@ -1,6 +1,6 @@
-//! A template for creating Rust open-source repo on GitHub
+//! Tons of extension utility functions for Rust.
 //!
-#![doc(html_root_url = "https://docs.rs/template-rs/0.1.2")]
+#![doc(html_root_url = "https://docs.rs/lazyext/0.0.1")]
 #![cfg_attr(docsrs, feature(doc_cfg))]
 #![cfg_attr(docsrs, allow(unused_attributes))]
 #![deny(missing_docs)]
