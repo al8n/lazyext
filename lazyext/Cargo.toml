@@ -1,0 +1,32 @@
+[package]
+name = "lazyext"
+version = "0.0.1"
+edition = "2021"
+#repository = "https://github.com/al8n/template-rs"
+description = "A placeholder"
+license = "MIT/Apache-2.0"
+
+[[bench]]
+path = "../benches/foo.rs"
+name = "foo"
+harness = false
+
+[features]
+default = ["full"]
+full = ["std"]
+std = ["lazyext-bytes", "lazyext-macros"]
+macros = ["lazyext-macros"]
+
+[dependencies]
+lazyext-bytes = { version = "0.0.1", path = "../lazyext-bytes", optional = true }
+lazyext-macros = { version = "0.0.1", path = "../lazyext-macros", optional = true }
+lazyext-sync = { version = "0.0.1", path = "../lazyext-sync", optional = true }
+
+
+[dev-dependencies]
+criterion = "0.3"
+tempfile = "3"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]

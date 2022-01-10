@@ -1,24 +1,11 @@
-[package]
-name = "lazyext"
-version = "0.0.1"
-edition = "2021"
-#repository = "https://github.com/al8n/template-rs"
-description = "A placeholder"
-license = "MIT/Apache-2.0"
-
-[[bench]]
-path = "benches/foo.rs"
-name = "foo"
-harness = false
-
-[features]
-default = []
-
-[dependencies]
-
-[dev-dependencies]
-criterion = "0.3"
-tempfile = "3"
+[workspace]
+members = [
+    "lazyext",
+    "lazyext-bytes",
+    "lazyext-fs",
+    "lazyext-macros",
+    "lazyext-sync"
+]
 
 [profile.bench]
 opt-level = 3
@@ -29,7 +16,3 @@ incremental = false
 debug-assertions = false
 overflow-checks = false
 rpath = false
-
-[package.metadata.docs.rs]
-all-features = true
-rustdoc-args = ["--cfg", "docsrs"]
