@@ -1,3 +1,11 @@
+//! Thousands of utility functions for slices and vec
+#![deny(
+    missing_docs,
+    warnings,
+)]
+#![cfg_attr(docsrs, feature(doc_cfg))]
+#![cfg_attr(docsrs, allow(unused_attributes))]
+
 #[cfg(feature = "alloc")]
 extern crate alloc;
 
