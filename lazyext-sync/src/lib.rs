@@ -2,6 +2,6 @@
 #![deny(missing_docs)]
 
 mod wg;
-pub use wg::{WaitGroup, AsyncWaitGroup};
+pub use wg::{AsyncWaitGroup, WaitGroup};
 
 mod arcmut;

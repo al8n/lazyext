@@ -1,10 +1,10 @@
 [workspace]
 members = [
     "lazyext",
-    "lazyext-bytes",
     "lazyext-fs",
     "lazyext-macros",
-    "lazyext-sync"
+    "lazyext-sync",
+    "lazyext-slice",
 ]
 
 [profile.bench]
