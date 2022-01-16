@@ -57,10 +57,10 @@ macro_rules! has_suffix {
 }
 
 macro_rules! longest_prefix {
-    ($trait:tt::$fn:tt) => {
+    ($trait:tt::$fn:tt, $ty: ty) => {
         /// Finds the longest shared prefix
         #[inline]
-        fn longest_prefix(&self, other: impl $trait) -> &[u8] {
+        fn longest_prefix(&self, other: impl $trait) -> &[$ty] {
             let k1 = $trait::$fn(self);
             let k2 = $trait::$fn(&other);
             let max = k1.len().min(k2.len());
@@ -78,10 +78,10 @@ macro_rules! longest_prefix {
 }
 
 macro_rules! longest_suffix {
-    ($trait:tt::$fn:tt) => {
+    ($trait:tt::$fn:tt, $ty: ty) => {
         /// Finds the longest shared suffix
         #[inline]
-        fn longest_suffix(&self, other: impl $trait) -> &[u8] {
+        fn longest_suffix(&self, other: impl $trait) -> &[$ty] {
             let k1 = $trait::$fn(self);
             let k1_len = k1.len();
             let k2 = $trait::$fn(&other);
@@ -139,9 +139,9 @@ macro_rules! impl_psfix_suites {
 
         has_suffix!($trait::$fn);
 
-        longest_prefix!($trait::$fn);
+        longest_prefix!($trait::$fn, $ty);
 
-        longest_suffix!($trait::$fn);
+        longest_suffix!($trait::$fn, $ty);
 
         cfg_alloc!{
             longest_prefix_lossy!($trait::$fn, $ty, $ty_literal);
