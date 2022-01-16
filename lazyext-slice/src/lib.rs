@@ -1,4 +1,5 @@
 //! Thousands of utility functions for slices and vec
+#![doc(html_root_url = "https://docs.rs/lazyext-slice/0.0.2")]
 #![deny(
     missing_docs,
     warnings,

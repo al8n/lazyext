@@ -1,6 +1,6 @@
 [package]
 name = "lazyext-slice"
-version = "0.0.1"
+version = "0.0.2"
 edition = "2021"
 repository = "https://github.com/al8n/lazyext/tree/main/lazyext-slice"
 description = "Thousands of utility functions for slices and vec"
@@ -8,7 +8,7 @@ license = "MIT/Apache-2.0"
 authors = ["Al Liu <scygliu@gmail.com>"]
 documentation = "https://docs.rs/lazyext-slice"
 keywords = ["utilities", "slice", "vec", "io"]
-categories = ["no_std"]
+categories = ["no-std"]
 
 [features]
 default = ["full"]
