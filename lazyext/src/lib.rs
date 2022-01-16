@@ -8,6 +8,6 @@
 
 pub use lazyext_slice as slice_ext;
 
-/// util macros
-#[cfg(feature = "lazyext-macros")]
-pub use lazyext_macros::{cfg_test, cfg_unix, cfg_windows};
+// util macros
+// #[cfg(feature = "lazyext-macros")]
+// pub use lazyext_macros::{cfg_test, cfg_unix, cfg_windows};
