@@ -5,7 +5,6 @@ edition = "2021"
 license = "MIT/Apache-2.0"
 repository = "https://github.com/al8n/lazyext"
 description = "Tons of utility functions for Rust developers"
-license = "MIT/Apache-2.0"
 authors = ["Al Liu <scygliu@gmail.com>"]
 documentation = "https://docs.rs/lazyext"
 keywords = ["utilities"]
