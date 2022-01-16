@@ -21,7 +21,7 @@ std = ["lazyext-slice/std", "lazyext-macros"]
 macros = ["lazyext-macros"]
 
 [dependencies]
-lazyext-slice = { version = "0.0.1", path = "../lazyext-slice", optional = true }
+lazyext-slice = { version = "0.0.2", path = "../lazyext-slice", optional = true }
 lazyext-macros = { version = "0.0.1", path = "../lazyext-macros", optional = true }
 lazyext-sync = { version = "0.0.1", path = "../lazyext-sync", optional = true }
 
